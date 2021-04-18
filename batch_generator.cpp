@@ -110,24 +110,6 @@ int getBatch(	int *edges, 		// Edges in the sentence graph
 			tmp = fscanf(fin, "%d ", &wid);
 			wrds[cnt_wrds] = wid;
 			cnt_wrds++; b_wlen++;
-
-			if (sample > 0) {							// Performing subsampling
-				float ran = (sqrt(id2freq[wid] / (sample * train_words)) + 1) * (sample * train_words) / id2freq[wid];
-				next_random = next_random * (unsigned long long)25214903917 + 11;
-				if (ran < (next_random & 0xFFFF) / (float)65536) sub_samp[cnt_sample] = 0;
-				else						 sub_samp[cnt_sample] = 1;
-				cnt_sample += 1;
-			}
-
-			k = 0;
-			while(k < num_neg){							// Getting negative samples
-				next_random = next_random * (unsigned long long)25214903917 + 11;
-				target = table[(next_random >> 16) % table_size];
-				if (target == wid) continue;
-				neg[cnt_negs++] = target;
-				k++;
-			}
-
 		}
 
 		for(j = 0; j < num_deps; j++){							// Including dependency edges
