@@ -8,6 +8,11 @@ from collections import defaultdict as ddict
 
 np.set_printoptions(precision=4)
 
+
+def get_corpus_len():
+    return 56790634
+
+
 def set_gpu(gpus):
 	"""
 	Sets the GPU to be used for the run
