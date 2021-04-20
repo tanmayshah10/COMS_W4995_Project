@@ -10,7 +10,7 @@ np.set_printoptions(precision=4)
 
 
 def get_corpus_len():
-    return 5000000
+    return 100000
 
 
 def set_gpu(gpus):
