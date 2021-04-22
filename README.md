@@ -1,6 +1,6 @@
 # Semantic Correction for Pre-Trained Word Embeddings 
 
-This repo contains code to inject semantic information into pre-trained syntactic word embeddings by balancing syntactic and semantic loss. 
+This repo contains code to inject semantic information into pre-trained syntactic word embeddings by minimizing the sum of syntactic and semantic loss. 
 
 The **syntactic loss** is calculated from pre-trained embeddings and assumed to be zero on initialization, since pre-trained embeddings are trained on syntactic features ( e.g. context windows or dependency relations). 
 
