@@ -3,7 +3,6 @@ __pycache__/
 log/
 data/
 embeddings/
-config/
 
 *.py[cod]
 *$py.class
