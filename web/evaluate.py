@@ -361,13 +361,13 @@ def evaluate_on_all(w):
     similarity_tasks = {
         "WS353": fetch_WS353(),
         "WS353R": fetch_WS353(which="relatedness"),
-        "WS353S": fetch_WS353(which="similarity")}
-#         "MEN": fetch_MEN(),
-#         "SimLex999": fetch_SimLex999(),
-#         "RW": fetch_RW(),
-#         "RG65": fetch_RG65(),
-#         "MTurk": fetch_MTurk(),
-#     }
+        "WS353S": fetch_WS353(which="similarity"),
+        "MEN": fetch_MEN(),
+        "SimLex999": fetch_SimLex999(),
+        "RW": fetch_RW(),
+        "RG65": fetch_RG65(),
+        "MTurk": fetch_MTurk(),
+    }
 
     similarity_results = {}
 
@@ -378,9 +378,9 @@ def evaluate_on_all(w):
     # Calculate results on analogy
     logger.info("Calculating analogy benchmarks")
     analogy_tasks = {
-        "MSR": fetch_msr_analogy()}
-#         "Google": fetch_google_analogy(),
-#     }
+        "MSR": fetch_msr_analogy(),
+        "Google": fetch_google_analogy(),
+    }
 
     analogy_results = {}
 
@@ -394,13 +394,13 @@ def evaluate_on_all(w):
     # Calculate results on categorization
     logger.info("Calculating categorization benchmarks")
     categorization_tasks = {
-        "AP": fetch_AP()}
-#         "BLESS": fetch_BLESS(),
-#         "Battig": fetch_battig(),
-#         "ESSLI_2c": fetch_ESSLI_2c(),
-#         "ESSLI_2b": fetch_ESSLI_2b(),
-#         "ESSLI_1a": fetch_ESSLI_1a()
-#     }
+        "AP": fetch_AP(),
+        "BLESS": fetch_BLESS(),
+        "Battig": fetch_battig(),
+        "ESSLI_2c": fetch_ESSLI_2c(),
+        "ESSLI_2b": fetch_ESSLI_2b(),
+        "ESSLI_1a": fetch_ESSLI_1a()
+    }
 
     categorization_results = {}
 
